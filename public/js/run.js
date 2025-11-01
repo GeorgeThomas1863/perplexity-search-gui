@@ -1,3 +1,4 @@
+import { buildReturnForm } from "./forms/return-form.js";
 import { sendToBack } from "./util/api-front.js";
 import { EYE_CLOSED_SVG, EYE_OPEN_SVG } from "./util/define-things.js";
 
@@ -19,9 +20,7 @@ export const runSearchSubmit = async () => {
   const queryInput = document.getElementById("query-input");
 
   const data = await sendToBack({ route: searchSubmitRoute, query: queryInput.value });
-  if (!data) return null
-  console.log("SEARCH RETURN DATA");
-  console.log(data);
+  await buildReturnForm(data);
 };
 
 //-------------------------
