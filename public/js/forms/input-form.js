@@ -3,10 +3,11 @@ export const buildInputForm = async () => {
   inputFormWrapper.id = "input-form-wrapper";
 
   const queryListItem = await buildQueryListItem();
-  const optionsListItem = await buildOptionsListItem();
+  // const optionsListItem = await buildOptionsListItem();
   const buttonListItem = await buildButtonListItem();
 
-  inputFormWrapper.append(queryListItem, optionsListItem, buttonListItem);
+  // inputFormWrapper.append(queryListItem, optionsListItem, buttonListItem);
+  inputFormWrapper.append(queryListItem, buttonListItem);
 
   return inputFormWrapper;
 };
@@ -15,19 +16,13 @@ export const buildQueryListItem = async () => {
   const queryListItem = document.createElement("li");
   queryListItem.id = "query-list-item";
 
-  const queryLabel = document.createElement("label");
-  queryLabel.id = "query-label";
-  queryLabel.setAttribute("for", "query-input");
-  queryLabel.textContent = "Query";
-
   const queryInput = document.createElement("input");
   queryInput.type = "text";
   queryInput.name = "query-input";
   queryInput.id = "query-input";
-  queryInput.className = "query-input";
   queryInput.placeholder = "Enter your search here";
 
-  queryListItem.append(queryLabel, queryInput);
+  queryListItem.append(queryInput);
   return queryListItem;
 };
 

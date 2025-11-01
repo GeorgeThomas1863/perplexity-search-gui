@@ -89,6 +89,68 @@ h3 {
   color: #2d3748;
 }
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ----------------------------------- */
+
+/* INPUT FORM STYLES */
+
+/* ------------------------------------- */
+
+#input-form-wrapper {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#query-input {
+  width: 100%;
+  padding: 14px 48px 14px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+#query-input:hover {
+  /* border-color: #3b82f6; */
+  border-color: #164388;
+}
+
+#query-input:focus {
+  border-color: #164388;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+#query-input::placeholder {
+  color: #a0aec0;
+}
+
+#submit-button {
+  padding: 1.5rem 1rem;
+  color: #ffffff;
+  background: #1a5025;
+}
+
+#submit-button:hover {
+  background: #2f6047;
+}
+
+#submit-button:active {
+  background: #2f6047;
+}
+
 /* +++++++++++++++++++++++++++++++++++++++ */
 
 /* -------------------------------------------------- */
