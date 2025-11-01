@@ -1,3 +1,5 @@
+import { runPwToggle, runAuthSubmit } from "./run.js";
+
 const authElement = document.getElementById("auth-element");
 const displayElement = document.getElementById("display-element");
 
