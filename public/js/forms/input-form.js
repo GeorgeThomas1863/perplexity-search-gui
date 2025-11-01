@@ -16,13 +16,19 @@ export const buildQueryListItem = async () => {
   const queryListItem = document.createElement("li");
   queryListItem.id = "query-list-item";
 
+  const queryLabel = document.createElement("label");
+  queryLabel.id = "query-label";
+  queryLabel.setAttribute("for", "query-input");
+  queryLabel.textContent = "Search with Perplexity";
+ 
+
   const queryInput = document.createElement("input");
   queryInput.type = "text";
   queryInput.name = "query-input";
   queryInput.id = "query-input";
   queryInput.placeholder = "Enter your search here";
 
-  queryListItem.append(queryInput);
+  queryListItem.append(queryLabel, queryInput);
   return queryListItem;
 };
 

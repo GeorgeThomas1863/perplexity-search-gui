@@ -1,4 +1,4 @@
-import { runPwToggle, runAuthSubmit } from "./run.js";
+import { runPwToggle, runAuthSubmit, runSearchSubmit } from "./run.js";
 
 const authElement = document.getElementById("auth-element");
 const displayElement = document.getElementById("display-element");
@@ -17,9 +17,23 @@ export const clickHandler = async (e) => {
 
   if (clickType === "pwToggle") await runPwToggle();
   if (clickType === "auth-submit") await runAuthSubmit();
+  if (clickType === "submit-button") await runSearchSubmit();
 };
 
-export const keyHandler = async (e) => {};
+export const keyHandler = async (e) => {
+  if (e.key !== "Enter") return null;
+  e.preventDefault();
+
+  const keyElement = e.target;
+  const keyId = keyElement.id;
+
+  console.log("KEY HANDLER");
+  console.log(keyId);
+
+  if (keyId === "auth-pw-input") await runAuthSubmit();
+  if (keyId === "query-input") await runSearchSubmit();
+  return true;
+};
 
 if (authElement) {
   authElement.addEventListener("click", clickHandler);
