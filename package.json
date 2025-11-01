@@ -1,0 +1,20 @@
+{
+  "name": "perplexity-search-gui",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeThomas1863/perplexity-search-gui.git"
+  },
+  "author": "GeorgeThomas1863",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgeThomas1863/perplexity-search-gui/issues"
+  },
+  "homepage": "https://github.com/GeorgeThomas1863/perplexity-search-gui#readme"
+}
